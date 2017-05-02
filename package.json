@@ -1,0 +1,21 @@
+{
+  "name": "helpbox",
+  "version": "1.0.0",
+  "description": "Various utility functions I'm tired of rewriting for every single project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/floriansimon1/helpbox.git"
+  },
+  "keywords": [
+    "tools",
+    "async",
+    "utility"
+  ],
+  "author": "Florian Simon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floriansimon1/helpbox/issues"
+  },
+  "homepage": "https://github.com/floriansimon1/helpbox#readme"
+}
