@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/floriansimon1/helpbox/issues"
   },
-  "homepage": "https://github.com/floriansimon1/helpbox#readme"
+  "homepage": "https://github.com/floriansimon1/helpbox#readme",
+  "dependencies": {
+    "lodash.deburr": "^4.1.0",
+    "lodash.flow": "^3.5.0",
+    "lodash.tolower": "^4.1.2"
+  }
 }
