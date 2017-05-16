@@ -12,6 +12,9 @@
     "async",
     "utility"
   ],
+  "scripts": {
+    "test": "tests/run.js"
+  },
   "author": "Florian Simon",
   "license": "MIT",
   "bugs": {
