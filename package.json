@@ -1,6 +1,6 @@
 {
   "name": "helpbox",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Various utility functions I'm tired of rewriting for every single project",
   "main": "index.js",
   "repository": {
@@ -19,6 +19,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/floriansimon1/helpbox/issues"
+  },
+  "browserify": {
+    "transform": ["babelify"]
   },
   "homepage": "https://github.com/floriansimon1/helpbox#readme",
   "dependencies": {
