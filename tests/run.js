@@ -4,7 +4,8 @@
 
 const chalk = require("chalk");
 
-let errors = require("./methodify-tests");
+let errors = require("./methodify-tests")
+.concat(require("./add-one-time-listener-tests"));
 
 if (errors.length) {
     errors.forEach(error => {
