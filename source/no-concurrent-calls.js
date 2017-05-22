@@ -3,21 +3,20 @@
 /*
 * Creates a version of λ that cannot be executed concurrently.
 *
-* Expects λ to take no arguments and to return a Promise.
-* When concurrent calls get cancelled, the wrapping function returns
-* undefined. Otherwise, it returns the Promise returned by λ.
+* Returns the Promise returned by λ.
 */
 module.exports = λ => {
-    let locked = false;
+    let locked  = false;
+    let promise = null;
 
     return () => {
         if (locked) {
-            return;
+            return promise;
         }
 
         locked = true;
 
-        λ().then(
+        promise = λ().then(
             results => {
                 locked = false;
 
@@ -30,5 +29,7 @@ module.exports = λ => {
                 return Promise.reject(error);
             }
         );
+
+        return promise;
     };
 };
