@@ -6,7 +6,8 @@ const chalk = require("chalk");
 
 (async () => {
     let errors = (
-        (await require("./methodify-tests"))
+        (await require("./regularly-tests"))
+        .concat(await require("./methodify-tests"))
         .concat(await require("./add-one-time-listener-tests"))
     );
 
