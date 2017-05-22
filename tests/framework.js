@@ -1,13 +1,19 @@
 "use strict";
 
-const head = require("lodash.head");
-
 const makeTest = (name, λ) => [name, λ];
 
-const runTests = tests => {
-    return tests
-    .filter(test => !test[1]())
-    .map(head);
+const runTests = async tests => {
+    let errors = [];
+
+    for (const [name, λ] of tests) {
+        const result = await λ();
+
+        if (!result) {
+            errors.push(name);
+        }
+    }
+
+    return errors;
 };
 
 module.exports = {

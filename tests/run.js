@@ -4,15 +4,19 @@
 
 const chalk = require("chalk");
 
-let errors = require("./methodify-tests")
-.concat(require("./add-one-time-listener-tests"));
+(async () => {
+    let errors = (
+        (await require("./methodify-tests"))
+        .concat(await require("./add-one-time-listener-tests"))
+    );
 
-if (errors.length) {
-    errors.forEach(error => {
-        console.log(chalk.red(`✘ ${error}`));
-    });
+    if (errors.length) {
+        errors.forEach(error => {
+            console.log(chalk.red(`✘ ${error}`));
+        });
 
-    process.exit(1);
-}
+        return;
+    }
 
-console.log(chalk.green(`✔ All test passed!`));
+    console.log(chalk.green(`✔ All test passed!`));
+})();
