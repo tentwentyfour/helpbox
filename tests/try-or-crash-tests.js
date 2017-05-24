@@ -5,7 +5,7 @@ const tryOrCrash = require("../source/try-or-crash");
 
 const crashException = new Error("crashed");
 
-const noop = () => {};
+const identity = x => x;
 
 const crash = () => {
     throw crashException;
@@ -27,8 +27,14 @@ module.exports = tester.run([
 
         const setCrashed = () => crashed = true;
 
-        tryOrCrash(noop, null, false, setCrashed);
+        tryOrCrash(identity, null, false, setCrashed);
 
         return crashed === false;
-    })
+    }),
+
+    tester.make("tryOrCrash() should return λ's return value if λ does not throw", () => {
+        const value = 1;
+
+        return tryOrCrash(identity.bind(null, value), null, false, identity) === value;
+    }),
 ]);

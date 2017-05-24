@@ -2,7 +2,7 @@
 
 module.exports = (λ, errorMessage = null, printException = false, crashFunction = process.exit.bind(process)) => {
     try {
-        λ();
+        return λ();
     } catch (error) {
         if (errorMessage) {
             console.error(errorMessage);
