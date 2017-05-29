@@ -8,5 +8,6 @@ module.exports = {
     looselyMatches:                 require("./source/loosely-matches"),
     resolveWhen:                    require("./source/resolve-when"),
     tryOrCrash:                     require("./source/try-or-crash"),
-    methodify:                      require("./source/methodify")
+    methodify:                      require("./source/methodify"),
+    delay:                          require("./source/delay")
 };
