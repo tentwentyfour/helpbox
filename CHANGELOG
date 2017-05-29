@@ -1,0 +1,6 @@
+Version 4.0.0 - 2017-05-29
+==========================
+* Removed resolveWhen
+* Introduce JSDoc
+* Allow noConcurrentCalls to be called with non-asynchronous functions
+* Added a readme file
