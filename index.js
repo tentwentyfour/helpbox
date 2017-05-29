@@ -9,5 +9,6 @@ module.exports = {
     resolveWhen:                    require("./source/resolve-when"),
     tryOrCrash:                     require("./source/try-or-crash"),
     methodify:                      require("./source/methodify"),
+    delayed:                        require("./source/delayed"),
     delay:                          require("./source/delay")
 };

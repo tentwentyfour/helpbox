@@ -1,13 +1,7 @@
 "use strict";
 
-module.exports = (λ, delay) => {
-    return new Promise((resolve, reject) => {
-        setTimeout(async () => {
-            try {
-                resolve(await λ());
-            } catch (error) {
-                reject(error);
-            }
-        }, delay || 0);
-    });
+const delayed = require("./delayed");
+
+module.exports = (λ, delay, ...otherArguments) => {
+    return delayed(λ, delay)(...otherArguments);
 };

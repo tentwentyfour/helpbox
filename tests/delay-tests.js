@@ -31,6 +31,14 @@ module.exports = tester.run([
 
         const λ = () => expected;
 
-        return (await delay(λ, 0)) === expected + 1;
+        return (await delay(λ, 0)) === expected;
+    }),
+
+    tester.make("delay() should properly forward additional arguments to λ", async () => {
+        const expected = 4;
+
+        const λ = (a, b) => a + b;
+
+        return (await delay(λ, 0, expected, expected)) === 2 * expected;
     })
 ]);
