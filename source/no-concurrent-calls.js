@@ -9,27 +9,23 @@ module.exports = λ => {
     let locked  = false;
     let promise = null;
 
-    return () => {
+    return async () => {
         if (locked) {
             return promise;
         }
 
         locked = true;
 
-        promise = λ().then(
-            results => {
-                locked = false;
+        try {
+            const results = await λ();
 
-                return results;
-            },
+            locked = false;
 
-            error => {
-                locked = false;
+            return results;
+        } catch (error) {
+            locked = false;
 
-                return Promise.reject(error);
-            }
-        );
-
-        return promise;
+            return Promise.reject(error);
+        }
     };
 };
