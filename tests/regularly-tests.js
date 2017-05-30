@@ -54,5 +54,20 @@ module.exports = tester.run([
 
             resolve(executionsCount === 2);
         }, 20);
-    }))
+    })),
+
+    tester.make("regularly() should call the passed error handler when λ throws", async () => {
+        let wasCalled = false;
+
+        const λ            = () => Promise.reject();
+        const errorHandler = () => wasCalled = true;
+
+        const pollingλ = regularly(λ, 100000, errorHandler);
+
+        await pollingλ();
+
+        pollingλ.stop();
+
+        return wasCalled === true;
+    })
 ]);
