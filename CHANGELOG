@@ -1,3 +1,8 @@
+Version 5.0.0 - 2017-05-30
+==========================
+* Regularly can now take an error handler. This helps avoid annoying unhandled promise rejection
+  errors when a throwing λ is used.
+
 Version 4.0.0 - 2017-05-29
 ==========================
 * Removed resolveWhen

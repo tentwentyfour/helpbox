@@ -21,6 +21,6 @@ $ npm run build:documentation
 ```
 
 ## Maintained branches
-* 4.X
+* 5.X
 
 Made with ❤️ by [TenTwentyFour](https://tentwentyfour.lu)
