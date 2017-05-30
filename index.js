@@ -6,7 +6,6 @@ module.exports = {
     noConcurrentCalls:              require("./source/no-concurrent-calls"),
     repeatAsyncUntil:               require("./source/repeat-async-until"),
     looselyMatches:                 require("./source/loosely-matches"),
-    resolveWhen:                    require("./source/resolve-when"),
     tryOrCrash:                     require("./source/try-or-crash"),
     methodify:                      require("./source/methodify"),
     delayed:                        require("./source/delayed"),
