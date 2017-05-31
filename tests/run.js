@@ -7,6 +7,7 @@ const chalk = require("chalk");
 (async () => {
     let errors = (
         (await require("./delay-tests"))
+        .concat(await require("./compact-tests"))
         .concat(await require("./regularly-tests"))
         .concat(await require("./methodify-tests"))
         .concat(await require("./try-or-crash-tests"))

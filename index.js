@@ -9,5 +9,6 @@ module.exports = {
     tryOrCrash:                     require("./source/try-or-crash"),
     methodify:                      require("./source/methodify"),
     delayed:                        require("./source/delayed"),
+    compact:                        require("./source/compact"),
     delay:                          require("./source/delay")
 };
