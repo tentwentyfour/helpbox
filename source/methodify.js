@@ -1,18 +1,13 @@
 "use strict";
 
-/*
-* Takes a function that expects an object as its first parameter and
-* returns a function that calls the original function with `this` as
-* its first parameter.
-*
-* `this` will be bound to null inside the returned function.
-*/
 /**
  * Takes a function that expects an object as its first parameter
  * and returns a version that passes `this` in lieu of this parameter,
  * so that the function can be called like a method.
  *
  * `this` gets bound to null when the method is called.
+ *
+ * @see demethodify
  *
  * @function methodify
  *
@@ -22,7 +17,7 @@
  * const tellAge = person => console.log(person.age);
  *
  * function Person(age) {
- *     this.age = 3;
+ *     this.age = age;
  * }
  *
  * Person.prototype.tellMyAge = methodify(tellAge);
