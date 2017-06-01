@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "test": "tests/run.js",
-    "build:documentation": "jsdoc -c configuration/jsdoc.json"
+    "build:documentation": "node_modules/.bin/jsdoc -c configuration/jsdoc.json",
+    "build:readme": "node_modules/.bin/markdown README.md | (echo -n \"<meta charset='UTF-8'\" && cat) > documentation/README.html"
   },
   "author": "Florian Simon",
   "license": "MIT",
@@ -38,6 +39,7 @@
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.5.1",
     "chalk": "^1.1.3",
-    "jsdoc-babel": "^0.3.0"
+    "jsdoc-babel": "^0.3.0",
+    "markdown-to-html": "0.0.13"
   }
 }
