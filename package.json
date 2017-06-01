@@ -15,7 +15,7 @@
   "scripts": {
     "test": "tests/run.js",
     "build:documentation": "node_modules/.bin/jsdoc -c configuration/jsdoc.json",
-    "build:readme": "node_modules/.bin/markdown README.md | (echo -n \"<meta charset='UTF-8'\" && cat) > documentation/README.html"
+    "build:readme": "node_modules/.bin/generate-md --layout github --input README.md --output documentation/README"
   },
   "author": "Florian Simon",
   "license": "MIT",
@@ -41,6 +41,6 @@
     "chalk": "^1.1.3",
     "jsdoc": "^3.4.3",
     "jsdoc-babel": "^0.3.0",
-    "markdown-to-html": "0.0.13"
+    "markdown-styles": "^3.1.9"
   }
 }
