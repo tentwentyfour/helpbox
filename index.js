@@ -7,6 +7,7 @@ module.exports = {
     repeatAsyncUntil:               require("./source/repeat-async-until"),
     looselyMatches:                 require("./source/loosely-matches"),
     tryOrCrash:                     require("./source/try-or-crash"),
+    demethodify:                    require("./source/demethodify"),
     methodify:                      require("./source/methodify"),
     delayed:                        require("./source/delayed"),
     compact:                        require("./source/compact"),
