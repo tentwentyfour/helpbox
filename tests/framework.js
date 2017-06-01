@@ -6,10 +6,14 @@ const runTests = async tests => {
     let errors = [];
 
     for (const [name, λ] of tests) {
-        const result = await λ();
+        try {
+            const result = await λ();
 
-        if (!result) {
-            errors.push(name);
+            if (!result) {
+                errors.push(`${name} (${result})`);
+            }
+        } catch (error) {
+            errors.push(`${name} (${error})`);
         }
     }
 
