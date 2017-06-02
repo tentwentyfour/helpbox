@@ -15,7 +15,7 @@
   "scripts": {
     "test": "tests/run.js",
     "build:documentation": "node_modules/.bin/jsdoc -c configuration/jsdoc.json",
-    "build:library": "node_modules/.bin/webpack  --config configuration/webpack.js",
+    "build:library": "node_modules/.bin/webpack --config configuration/webpack.js",
     "build:readme": "node_modules/.bin/generate-md --layout github --input README.md --output documentation/README"
   },
   "author": "Florian Simon",
