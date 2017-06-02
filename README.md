@@ -14,13 +14,6 @@ Documentation is available on our [website](https://helpbox.tentwentyfour.lu/ind
 `$ npm install helpbox`
 ### Running tests
 `$ npm test`
-### Documentation
-```
-$ git clone git@github.com:tentwentyfour/helpbox.git
-$ cd helpbox
-$ npm install
-$ npm run build:documentation
-```
 
 ## Maintained branches
 * 5.X
