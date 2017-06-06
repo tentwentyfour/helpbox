@@ -11,7 +11,7 @@ const looseMatchTransform = flow(deburr, toLower);
  * The main advantages of this function are that it removes accented characters and that
  * it is case-insensitive.
  *
- * Powered by lodash's {@link https://lodash.com/docs/#deburr deburr}
+ * Powered by lodash's {@link https://lodash.com/docs/#deburr deburr}.
  *
  * @function looselyMatches
  *
