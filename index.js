@@ -11,5 +11,6 @@ module.exports = {
     methodify:                      require("./source/methodify"),
     delayed:                        require("./source/delayed"),
     compact:                        require("./source/compact"),
+    assert:                         require("./source/assert"),
     delay:                          require("./source/delay")
 };
