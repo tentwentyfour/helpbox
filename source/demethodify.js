@@ -27,9 +27,9 @@
  * // Prints 3.
  * tellPersonAge(person);
  *
- * @param λ {Function} The function to methodify.
+ * @param λ {Function} The function to demethodify.
  *
- * @return {Function} The function in its methodified form.
+ * @return {Function} The function in its demethodified form.
  */
 module.exports = λ => {
     return function () {
