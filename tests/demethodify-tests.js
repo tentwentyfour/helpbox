@@ -4,7 +4,7 @@ const tester      = require("./framework");
 const demethodify = require("../source/demethodify");
 
 module.exports = tester.run([
-    tester.make("methodify() should properly demethodify simple functions", () => {
+    tester.make("demethodify() should properly demethodify simple functions", () => {
         function Person(age) {
             this.age = age;
         }
