@@ -890,8 +890,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 module.exports = function (object) {
     var keys = (0, _keys2.default)(object);
 
-    for (var i = 0; i < keys.length; i++) {
-        var key = keys[i];
+    for (var it = 0; it < keys.length; it++) {
+        var key = keys[it];
         var value = object[key];
 
         if (value === false || value === undefined || value === null) {
