@@ -12,8 +12,8 @@
 module.exports = object => {
     const keys = Object.keys(object);
 
-    for (let i = 0; i < keys.length; i++) {
-        const key   = keys[i];
+    for (let it = 0; it < keys.length; it++) {
+        const key   = keys[it];
         const value = object[key];
 
         if (value === false || value === undefined || value === null) {
