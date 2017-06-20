@@ -9,7 +9,5 @@
  * @return {Function} A factory function that constructs object with the passed constructor,
  */
 module.exports = Constructor => function () {
-    const instance = Object.create(Constructor.prototype);
-
-    return Constructor.apply(instance, arguments);
+    return new Constructor(...arguments);
 };
