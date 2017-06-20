@@ -8,6 +8,7 @@ module.exports = {
     looselyMatches:                 require("./source/loosely-matches"),
     tryOrCrash:                     require("./source/try-or-crash"),
     demethodify:                    require("./source/demethodify"),
+    factorify:                      require("./source/factorify"),
     methodify:                      require("./source/methodify"),
     delayed:                        require("./source/delayed"),
     compact:                        require("./source/compact"),
