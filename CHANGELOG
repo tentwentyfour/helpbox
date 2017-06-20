@@ -3,6 +3,10 @@ Version 5.0.0 - 2017-05-30
 * Regularly can now take an error handler. This helps avoid annoying unhandled promise rejection
   errors when a throwing λ is used.
 
+5.5.1
+-----
+* Removed accidentally pushed wrong files.
+
 5.5.0
 -----
 * Added factorify()
