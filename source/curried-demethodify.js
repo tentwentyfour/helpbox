@@ -46,7 +46,7 @@ module.exports = (methodName, method) => {
 
         parameters.splice(staticVersionArity - 1, 1);
 
-        return method.call(instance, ...parameters);
+        return (instance[methodName] || method).call(instance, ...parameters);
     };
 
     return recurry;
