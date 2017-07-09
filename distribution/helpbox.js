@@ -1045,6 +1045,8 @@ module.exports = function (methodName, method) {
     var staticVersionArity = method.length + 1;
 
     var recurry = function recurry() {
+        var _ref;
+
         for (var _len = arguments.length, parameters = Array(_len), _key = 0; _key < _len; _key++) {
             parameters[_key] = arguments[_key];
         }
@@ -1063,7 +1065,7 @@ module.exports = function (methodName, method) {
 
         parameters.splice(staticVersionArity - 1, 1);
 
-        return method.call.apply(method, [instance].concat(parameters));
+        return (_ref = instance[methodName] || method).call.apply(_ref, [instance].concat(parameters));
     };
 
     return recurry;
