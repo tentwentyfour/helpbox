@@ -3,6 +3,14 @@ Version 5.0.0 - 2017-05-30
 * Regularly can now take an error handler. This helps avoid annoying unhandled promise rejection
   errors when a throwing λ is used.
 
+5.7.1
+-----
+* In curriedMethodify(), if the instance has the method, favor using that method instead of the one from the passed prototype
+
+5.7.0
+-----
+* Added curriedDemethodify() and demethodifyPrototype()
+
 5.6.0
 -----
 * Added sequentially()
