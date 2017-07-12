@@ -9,6 +9,7 @@ const chalk = require("chalk");
         (await require("./delay-tests"))
         .concat(await require("./assert-tests"))
         .concat(await require("./compact-tests"))
+        .concat(await require("./to-async-tests"))
         .concat(await require("./regularly-tests"))
         .concat(await require("./methodify-tests"))
         .concat(await require("./demethodify-tests"))
