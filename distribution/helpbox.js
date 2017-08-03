@@ -1460,7 +1460,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * // Will contain Fred's ID.
  * const lastUserId = sequentially(createUser, users);
  *
- * @param λ                  {Function} The async function to execute concurrently.
+ * @param λ                  {Function} The async function to execute sequentially.
  * @param inputArray         {Array}    The array on which λ gets executed.
  * @param defaultReturnValue {Any}      (Optional) If the inputArray, the returned promise will hold that value.
  *
