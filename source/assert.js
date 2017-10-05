@@ -1,5 +1,7 @@
 "use strict";
 
+let loggingFunction = console.error.bind(console);
+
 /**
  * If `truthy` is a truthy, returns that truthy without doing anything else. If it is
  * a falsy, returns it and displays the assertion message.
@@ -13,10 +15,16 @@
  */
 module.exports = (truthy, message) => {
     if (!truthy) {
-        module.exports.errorLoggingFunction(message);
+        loggingFunction(message);
     }
 
     return truthy;
 };
 
-module.exports.errorLoggingFunction = console.error.bind(console);
+module.exports.setErrorLoggingFunction = λ => {
+    loggingFunction = λ;
+};
+
+module.exports.getErrorLoggingFunction = () => {
+    return loggingFunction;
+};

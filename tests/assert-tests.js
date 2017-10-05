@@ -4,19 +4,19 @@ const tester = require("./framework");
 const assert = require("../source/assert");
 
 const callAssert = (truthy, message, test) => {
-    const regularLoggingFunction = assert.errorLoggingFunction;
+    const regularLoggingFunction = assert.getErrorLoggingFunction();
 
     let called     = false;
     let calledWith = undefined;
 
-    assert.errorLoggingFunction = message => {
+    assert.setErrorLoggingFunction(message => {
         called     = true;
         calledWith = message;
-    };
+    });
 
     const returnValue = assert(truthy, message);
 
-    assert.errorLoggingFunction = regularLoggingFunction;
+    assert.setErrorLoggingFunction(regularLoggingFunction);
 
     return test(returnValue, called, calledWith);
 };
