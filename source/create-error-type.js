@@ -1,6 +1,16 @@
 "use strict";
 
-function createErrorType(name, initialize = undefined, prototype = undefined) {
+/**
+ * Return a constructor for a new error type.
+ *
+ * @function createErrorType
+ *
+ * @param delay          {Function} The delay, in ms.
+ * @param otherArguments {Object}   Additional arguments to pass to λ.
+ *
+ * @return {Function} A function that returns a promise that resolves with the return value of λ.
+ */
+function createErrorType(initialize = undefined, prototype = undefined) {
     let Constructor = function (message) {
         let error = Object.create(Constructor.prototype);
 

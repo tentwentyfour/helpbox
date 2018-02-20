@@ -5,7 +5,7 @@ const createErrorType = require("../source/create-error-type");
 
 module.exports = tester.run([
     tester.make("createErrorType() create the right hierarchy", () => {
-        const TestError = createErrorType("TestError");
+        const TestError = createErrorType();
 
         const instance = TestError();
 
@@ -13,7 +13,7 @@ module.exports = tester.run([
     }),
 
     tester.make("createErrorType() should create constructors that assume their first parameter is a message", () => {
-        const TestError = createErrorType("TestError");
+        const TestError = createErrorType();
         const message   = "A";
 
         return TestError(message).message === message;
@@ -24,7 +24,7 @@ module.exports = tester.run([
 
         const prototype = { a: {}, b: () => b };
 
-        const TestError = createErrorType("TestError", null, prototype);
+        const TestError = createErrorType(null, prototype);
 
         const instance = new TestError;
 
@@ -35,7 +35,7 @@ module.exports = tester.run([
         const message          = "j";
         const transformMessage = message => `i${message}`;
 
-        const TestError = createErrorType("TestError", function (self, message) {
+        const TestError = createErrorType(function (self, message) {
             self.message = transformMessage(message);
         });
 
@@ -43,6 +43,6 @@ module.exports = tester.run([
     }),
 
     tester.make("createErrorType() should initialize the stack property", () => {
-        return createErrorType("TestError")().stack;
+        return createErrorType()().stack;
     })
 ]);
