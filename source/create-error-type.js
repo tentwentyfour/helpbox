@@ -5,10 +5,11 @@
  *
  * @function createErrorType
  *
- * @param delay          {Function} The delay, in ms.
- * @param otherArguments {Object}   Additional arguments to pass to λ.
+ * @param initialize {Function} A function that gets passed the constructed error and the passed message and
+ *                              runs during the construction of new instances.
+ * @param prototype  {Object}   Additional properties and methods for the new error type.
  *
- * @return {Function} A function that returns a promise that resolves with the return value of λ.
+ * @return {Function} The constructor for the new error type.
  */
 function createErrorType(initialize = undefined, prototype = undefined) {
     let Constructor = function (message) {
