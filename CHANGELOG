@@ -1,3 +1,7 @@
+Version 6.0.0 - 2017-10-05
+==========================
+* assert() no longer presents errorLoggingFunction, but has a getter and a setter now.
+
 Version 5.0.0 - 2017-05-30
 ==========================
 * Regularly can now take an error handler. This helps avoid annoying unhandled promise rejection
