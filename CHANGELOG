@@ -6,6 +6,11 @@ Version 6.0.0 - 2017-10-05
 -----
 * Add createErrorType()
 
+6.1.1 & 6.1.2
+-------------
+* Fix the documentation for createErrorType()
+* Include it in index.js
+
 Version 5.0.0 - 2017-05-30
 ==========================
 * Regularly can now take an error handler. This helps avoid annoying unhandled promise rejection
