@@ -24,7 +24,7 @@ module.exports = tester.run([
 
         const prototype = { a: {}, b: () => b };
 
-        const TestError = createErrorType(null, prototype);
+        const TestError = createErrorType(null, null, prototype);
 
         const instance = new TestError;
 
@@ -44,5 +44,15 @@ module.exports = tester.run([
 
     tester.make("createErrorType() should initialize the stack property", () => {
         return createErrorType()().stack;
+    }),
+
+    tester.make("createErrorType() should allow to subclass Error subclasses", () => {
+        const Base = createErrorType();
+
+        const Child = createErrorType(null, Base);
+
+        const instance = new Child;
+
+        return instance instanceof Child && instance instanceof Base && instance instanceof Error;
     })
 ]);
