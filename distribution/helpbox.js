@@ -1196,6 +1196,7 @@ module.exports = function (object) {
  *
  * @param initialize {Function} A function that gets passed the constructed error and the passed message and
  *                              runs during the construction of new instances.
+ * @param ErrorClass {Function} An error class you wish to subclass. Defaults to Error.
  * @param prototype  {Object}   Additional properties and methods for the new error type.
  *
  * @return {Function} The constructor for the new error type.
@@ -1213,7 +1214,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function createErrorType() {
     var initialize = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
-    var prototype = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
+    var ErrorClass = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;
+    var prototype = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : undefined;
+
+    ErrorClass = ErrorClass || Error;
 
     var Constructor = function Constructor(message) {
         var error = (0, _create2.default)(Constructor.prototype);
@@ -1228,7 +1232,7 @@ function createErrorType() {
         return error;
     };
 
-    Constructor.prototype = (0, _assign2.default)((0, _create2.default)(Error.prototype), prototype);
+    Constructor.prototype = (0, _assign2.default)((0, _create2.default)(ErrorClass.prototype), prototype);
 
     return Constructor;
 }
