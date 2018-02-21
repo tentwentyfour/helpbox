@@ -16,6 +16,6 @@ Documentation is available on our [website](https://helpbox.tentwentyfour.lu/ind
 `$ npm test`
 
 ## Maintained branches
-* 6.1.X
+* 7.X
 
 Made with ❤️ by [TenTwentyFour](https://tentwentyfour.lu)
