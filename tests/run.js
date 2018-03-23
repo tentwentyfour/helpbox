@@ -16,6 +16,7 @@ const chalk = require("chalk");
         .concat(await require("./try-or-crash-tests"))
         .concat(await require("./sequentially-tests"))
         .concat(await require("./create-error-type-tests"))
+        .concat(await require("./number-of-decimals-tests"))
         .concat(await require("./demethodify-prototype-tests"))
         .concat(await require("./add-one-time-listener-tests"))
     );

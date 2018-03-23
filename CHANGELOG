@@ -2,6 +2,10 @@ Version 7.0.0 - 2018-02-21
 ==========================
 * createErrorType() allows to subclass custom error types created with it.
 
+7.1.0
+-----
+* Added numberOfDecimals()
+
 Version 6.0.0 - 2017-10-05
 ==========================
 * assert() no longer presents errorLoggingFunction, but has a getter and a setter now.
