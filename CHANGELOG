@@ -6,6 +6,10 @@ Version 7.0.0 - 2018-02-21
 -----
 * Added numberOfDecimals()
 
+7.1.1
+-----
+* Include numberOfDecimals into index.js
+
 Version 6.0.0 - 2017-10-05
 ==========================
 * assert() no longer presents errorLoggingFunction, but has a getter and a setter now.

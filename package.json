@@ -1,6 +1,6 @@
 {
   "name": "helpbox",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "description": "Various utility functions I'm tired of rewriting for every single project",
   "main": "index.js",
   "repository": {
