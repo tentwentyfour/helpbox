@@ -1,15 +1,16 @@
 "use strict";
 
 /**
- * Returns the number of decimals in provided number.
- * It works also for string containing valid number.
+ * Returns the number of decimals in a given number.
+ * The function also works for strings containing valid
+ * numbers.
  *
  * @function numberOfDecimals
  *
  * @param number {Number|String} The number to check.
  *
- * @return {Number} A number of decimals (0 for integer).
+ * @return {Number} A number of decimals (0 for integers).
  */
 module.exports = number => {
-    return ((number.toString()).split('.')[1] || []).length;
+    return ((number.toString()).split(".")[1] || []).length;
 };
